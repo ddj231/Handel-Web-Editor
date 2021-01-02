@@ -245,5 +245,3 @@ export var MyEditor = CodeMirror(document.body, {
   lineNumbers: true,
   mode: 'handel'
 });
-
-MyEditor.classList.add('CodeMirror');

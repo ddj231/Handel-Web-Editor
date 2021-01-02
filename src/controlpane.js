@@ -1,11 +1,17 @@
 import {MyEditor} from './editor.js';
 export function ControlPane(props){
     let [runSelected, setRunSelected] = React.useState(false);
+    let [runCount, setRunCount] = React.useState(0);
+    let [errorRunning, setErrorRunning] = React.useState(false);
+    window.onError = function(message, source, lineno, colno, error) {
+        setErrorRunning(true);
+    }
 
     function playClicked(){
         if(!runSelected){
             //TODO: run handel program
             const handelCode = MyEditor.getValue();
+            console.log("try run")
             RunHandel(handelCode);
             setRunSelected(true);
         }
@@ -26,6 +32,9 @@ export function ControlPane(props){
             </div>
             <div onClick={stopClicked} className={`mybtn ${!runSelected ? "mybtnselected": ""}`}>
                 <div className="buttontext">Stop</div>
+            </div>
+            <div className="errorbox">
+                {errorRunning && "Error running handel program"}
             </div>
         </div>
     )

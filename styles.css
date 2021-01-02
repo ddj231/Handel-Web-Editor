@@ -87,6 +87,11 @@ body {
 .CodeMirror {
     margin-top: 5px;
     border: 1px solid lightslategray;
-    width: 50%;
+    width: 80%;
     resize: both;
+}
+
+.consoleheader {
+    height: 20px;
+    width: 100%;
 }

@@ -7,10 +7,25 @@ export function ControlPane(props) {
         runSelected = _React$useState2[0],
         setRunSelected = _React$useState2[1];
 
+    var _React$useState3 = React.useState(0),
+        _React$useState4 = _slicedToArray(_React$useState3, 2),
+        runCount = _React$useState4[0],
+        setRunCount = _React$useState4[1];
+
+    var _React$useState5 = React.useState(false),
+        _React$useState6 = _slicedToArray(_React$useState5, 2),
+        errorRunning = _React$useState6[0],
+        setErrorRunning = _React$useState6[1];
+
+    window.onError = function (message, source, lineno, colno, error) {
+        setErrorRunning(true);
+    };
+
     function playClicked() {
         if (!runSelected) {
             //TODO: run handel program
             var handelCode = MyEditor.getValue();
+            console.log("try run");
             RunHandel(handelCode);
             setRunSelected(true);
         }
@@ -44,6 +59,11 @@ export function ControlPane(props) {
                 { className: "buttontext" },
                 "Stop"
             )
+        ),
+        React.createElement(
+            "div",
+            { className: "errorbox" },
+            errorRunning && "Error running handel program"
         )
     );
 }

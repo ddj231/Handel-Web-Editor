@@ -235,6 +235,8 @@ CodeMirror.defineSimpleMode("handel", {
     start: [
       {regex: /(chunk)(\s+)([a-z$]*)/,
        token: ["keyword", null, "variable-2"]},
+      {regex: /(run)(\s+)([a-z$]*)/,
+       token: ["keyword", null, "variable-2"]},
       {regex: /(save)(\s+)([a-z$]*)/,
        token: ["keyword", null, "variable-2"]},
       {regex: /(?:play|rest|chunk|endchunk|run|save|start|finish|bpm|loop|sound)\b/,
@@ -251,3 +253,8 @@ export const MyEditor = CodeMirror(document.body, {
     lineNumbers: true,
     mode: 'handel',
 }); 
+
+let myConsole = document.createElement('div');
+//myConsole.innerText = "hello";
+//document.body.appendChild(myConsole);
+let header = document.createElement('div');

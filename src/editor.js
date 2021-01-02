@@ -247,6 +247,9 @@ CodeMirror.defineSimpleMode("handel", {
   
 
 export const MyEditor = CodeMirror(document.body, {
+    value: `start\n\tplay E4 for 1b\nfinish`,
     lineNumbers: true,
     mode: 'handel'
 }); 
+
+MyEditor.classList.add('CodeMirror')

@@ -83,3 +83,10 @@ body {
     font-size: 12px;
     text-align: center;
 }
+
+.CodeMirror {
+    margin-top: 5px;
+    border: 1px solid lightslategray;
+    width: 50%;
+    resize: both;
+}

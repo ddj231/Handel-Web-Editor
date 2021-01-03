@@ -7,5 +7,5 @@ Handel is small procedural programming language for writting songs in browser.
 Try the Editor here: [Handel Web Editor](https://ddj231.github.io/Handel-Web-Editor/)
 
 
-<img src="./assets/Handel-Thumbnail.png" style="height: 300px; width: 300px">
+<img src="./assets/Handel-Thumbnail.png" width="300" heigh="300">
 

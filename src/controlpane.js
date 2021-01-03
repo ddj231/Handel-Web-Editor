@@ -33,9 +33,11 @@ export function ControlPane(props){
             <div onClick={stopClicked} className={`mybtn ${!runSelected ? "mybtnselected": ""}`}>
                 <div className="buttontext">Stop</div>
             </div>
-            <div className="errorbox">
-                {errorRunning && "Error running handel program"}
-            </div>
+            <a href="https://github.com/ddj231/Handel">
+                <div className="guide">
+                    go to language guide
+                </div>
+            </a>
         </div>
     )
 }

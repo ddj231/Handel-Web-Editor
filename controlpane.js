@@ -61,9 +61,13 @@ export function ControlPane(props) {
             )
         ),
         React.createElement(
-            "div",
-            { className: "errorbox" },
-            errorRunning && "Error running handel program"
+            "a",
+            { href: "https://github.com/ddj231/Handel" },
+            React.createElement(
+                "div",
+                { className: "guide" },
+                "go to language guide"
+            )
         )
     );
 }

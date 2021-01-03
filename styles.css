@@ -108,6 +108,16 @@ a {
     margin-left: 5px;
 }
 
+.form-check {
+    margin-left: 20px;
+}
+
+.vimtext {
+    font-size: 13px;
+    color: gray;
+    margin-right: 20px;
+}
+
 .guide:hover {
     color: crimson;
     cursor: pointer;
@@ -178,4 +188,12 @@ a {
 
 .modalitem:hover {
     background-color: crimson;
+}
+
+.cm-fat-cursor .CodeMirror-cursor {
+    background-color: crimson !important;
+}
+
+.cm-animate-fat-cursor {
+    background-color: crimson !important;
 }

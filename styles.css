@@ -1,6 +1,8 @@
 body {
     font-family: Nunito, sans-serif;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 a {
@@ -92,7 +94,7 @@ a {
 .CodeMirror {
     margin-top: 5px;
     border: 1px solid lightslategray;
-    width: 80%;
+    max-width: 98%;
     resize: both;
     font-size: 15px;
 }

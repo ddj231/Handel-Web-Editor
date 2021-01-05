@@ -80,7 +80,7 @@ export function ControlPane(props) {
         ),
         React.createElement(
             'a',
-            { href: 'https://github.com/ddj231/Handel' },
+            { href: 'https://handel-pl.github.io' },
             React.createElement(
                 'div',
                 { className: 'guide' },

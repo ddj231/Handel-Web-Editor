@@ -47,7 +47,7 @@ export function ControlPane(props){
                 <input checked={vimModeChecked} onChange={handleVimModeChange} type="checkbox" class="form-check-input" id="exampleCheck1"/>
                 <label class="vimtext" for="exampleCheck1">vim mode</label>
             </div>
-            <a href="https://github.com/ddj231/Handel">
+            <a href="https://handel-pl.github.io">
                 <div className="guide">
                     go to language guide
                 </div>

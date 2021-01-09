@@ -92,7 +92,7 @@ a {
 }
 
 .CodeMirror {
-    margin-top: 5px;
+    margin-top: 30px;
     border: 1px solid lightslategray;
     max-width: 98%;
     resize: both;
@@ -161,9 +161,9 @@ a {
 .filemodal {
     position: absolute;
     color: black;
-    bottom: -75px;
+    bottom: -100px;
     left: -10px;
-    height: 70px;
+    height: 100px;
     width: 200px;
     background-color: rgb(240, 240, 240);
     text-align: left;
@@ -173,7 +173,14 @@ a {
 .modalitemtop {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    height: 50%;
+    height: 33%;
+    width: 100%;
+    padding: 10px;
+    color: rgb(40, 40, 40);
+}
+
+.modalitemmiddle{
+    height: 33%;
     width: 100%;
     padding: 10px;
     color: rgb(40, 40, 40);
@@ -182,7 +189,7 @@ a {
 .modalitembottom{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    height: 50%;
+    height: 33%;
     width: 100%;
     padding: 10px;
     color: rgb(40, 40, 40);

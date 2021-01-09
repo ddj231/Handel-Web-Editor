@@ -21,9 +21,7 @@ export function ControlPane(props) {
 
     function playClicked() {
         if (!runSelected) {
-            //TODO: run handel program
             var handelCode = MyEditor.getValue();
-            console.log("try run");
             Handel.RunHandel(handelCode);
             setRunSelected(true);
         }
@@ -31,7 +29,6 @@ export function ControlPane(props) {
 
     function stopClicked() {
         if (runSelected) {
-            //TODO: stop handel program
             Handel.StopHandel();
             setRunSelected(false);
         }

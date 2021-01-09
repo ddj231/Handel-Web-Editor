@@ -11,6 +11,11 @@ function FileModal(props){
         URL.revokeObjectURL(a.href);
     }
 
+    function exportClicked(){
+        const handelCode = MyEditor.getValue();
+        Handel.RunHandel(handelCode, {outputMidi: true});
+    }
+
     function newClicked(){
         MyEditor.setValue(`start\n\tplay E4 for 1b\nfinish`);
     }
@@ -18,7 +23,8 @@ function FileModal(props){
     return(
         <div className="filemodal">
             <div onClick={newClicked} className="modalitem modalitemtop">New</div>
-            <div onClick={saveClicked} className="modalitem modalitembottom">Save</div>
+            <div onClick={saveClicked} className="modalitem modalitemmiddle">Save</div>
+            <div onClick={exportClicked} className="modalitem modalitembottom">Export MIDI</div>
         </div>
     )
 }

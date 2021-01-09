@@ -13,6 +13,11 @@ function FileModal(props) {
         URL.revokeObjectURL(a.href);
     }
 
+    function exportClicked() {
+        var handelCode = MyEditor.getValue();
+        Handel.RunHandel(handelCode, { outputMidi: true });
+    }
+
     function newClicked() {
         MyEditor.setValue('start\n\tplay E4 for 1b\nfinish');
     }
@@ -27,8 +32,13 @@ function FileModal(props) {
         ),
         React.createElement(
             'div',
-            { onClick: saveClicked, className: 'modalitem modalitembottom' },
+            { onClick: saveClicked, className: 'modalitem modalitemmiddle' },
             'Save'
+        ),
+        React.createElement(
+            'div',
+            { onClick: exportClicked, className: 'modalitem modalitembottom' },
+            'Export MIDI'
         )
     );
 }

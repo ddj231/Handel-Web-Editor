@@ -11,7 +11,7 @@ export function ControlPane(props){
             //TODO: run handel program
             const handelCode = MyEditor.getValue();
             console.log("try run")
-            RunHandel(handelCode);
+            Handel.RunHandel(handelCode);
             setRunSelected(true);
         }
     }
@@ -19,7 +19,7 @@ export function ControlPane(props){
     function stopClicked(){
         if(runSelected){
             //TODO: stop handel program
-            StopHandel();
+            Handel.StopHandel();
             setRunSelected(false);
         }
     }

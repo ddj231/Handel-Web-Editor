@@ -237,19 +237,19 @@ CodeMirror.defineSimpleMode("handel", {
        token: ["keyword", null, "variable-2"]},
       {regex: /(run)(\s+)([a-z$]*)/,
        token: ["keyword", null, "variable-2"]},
-      {regex: /(save)(\s+)([a-z$]*)/,
-       token: ["keyword", null, "variable-2"]},
       {regex: /(?:play|rest|block|endblock|chunk|endchunk|run|save|start|finish|bpm|loop|sound|volume|pan|reverb)\b/,
        token: "keyword"},
       {regex: /synth|casio|guitar|piano|snare|kick|hihat/, token: "atom"},
-      {regex: /(?:for|using|with|update|lshift|rshift)\b/,
+      {regex: /(?:for|using|with|update|lshift|rshift|if|then|else|endif)\b/,
        token: "keyword"},
+      {regex: /(?:lessthan|greaterthan|equalto)\b/,
+       token: "atom"},
     ],
   });
   
-
+let startVal = `start\n\tsave cmajor = C2, E2, G2\n\tif cmajor equalto cmajor then\n\t\tplay cmajor for 4b\n\tendif\nfinish`
 export const MyEditor = CodeMirror(document.body, {
-    value: `start\n\tplay E4 for 1b\nfinish`,
+    value: startVal,
     lineNumbers: true,
     mode: 'handel',
 }); 

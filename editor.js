@@ -236,8 +236,8 @@ CodeMirror.defineSimpleMode("handel", {
   start: [{ regex: /(chunk)(\s+)([a-z$]*)/,
     token: ["keyword", null, "variable-2"] }, { regex: /(run)(\s+)([a-z$]*)/,
     token: ["keyword", null, "variable-2"] }, { regex: /(?:play|rest|block|endblock|chunk|endchunk|run|save|start|finish|bpm|loop|sound|volume|pan|reverb)\b/,
-    token: "keyword" }, { regex: /synth|casio|guitar|piano|snare|kick|hihat/, token: "atom" }, { regex: /(?:for|using|with|update|lshift|rshift|if|then|else|endif)\b/,
-    token: "keyword" }, { regex: /(?:lessthan|greaterthan|equalto)\b/,
+    token: "keyword" }, { regex: /synth|casio|guitar|piano|snare|kick|hihat/, token: "atom" }, { regex: /(?:for|using|with|update|if|then|else|endif)\b/,
+    token: "keyword" }, { regex: /(?:lessthan|greaterthan|equalto|randint|eval|to|lshift|rshift)\b/,
     token: "atom" }]
 });
 

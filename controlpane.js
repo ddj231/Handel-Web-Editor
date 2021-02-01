@@ -77,7 +77,7 @@ export function ControlPane(props) {
         ),
         React.createElement(
             'a',
-            { href: 'https://handel-pl.github.io' },
+            { href: 'https://ddj231.github.io/Handel-Documentation/docs/' },
             React.createElement(
                 'div',
                 { className: 'guide' },

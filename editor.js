@@ -241,7 +241,7 @@ CodeMirror.defineSimpleMode("handel", {
     token: "atom" }]
 });
 
-var startVal = "start\n\tsave cmajor = C2, E2, G2\n\tif cmajor equalto cmajor then\n\t\tplay cmajor for 4b\n\tendif\nfinish";
+var startVal = "start\n\tsave cmajorsev = C3, E3, G3, B3\n\tchunk example\n\t\tblock \n          save note = choose 1 from cmajorsev\n          play note for 2b\n      endblock loop for 100\n    endchunk\n\n  run example with sound piano\nfinish";
 export var MyEditor = CodeMirror(document.body, {
   value: startVal,
   lineNumbers: true,

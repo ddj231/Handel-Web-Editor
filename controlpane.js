@@ -41,7 +41,6 @@ export function ControlPane(props) {
             MyEditor.setOption("keyMap", "vim");
         }
         setVimModeChecked(!vimModeChecked);
-        console.log('handled');
     }
 
     return React.createElement(

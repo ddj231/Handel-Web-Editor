@@ -22,9 +22,9 @@ export function ControlPane(props) {
     function playClicked() {
         if (!runSelected) {
             var handelCode = MyEditor.getValue();
-            console.log(handelCode);
             var voiceinst = Handel.MakeInstrument({
-                A3: './assets/Do-A3.wav'
+                A3: './assets/Do-A3.wav',
+                A2: './assets/Do-A2.wav'
             });
             var config = {
                 instruments: {

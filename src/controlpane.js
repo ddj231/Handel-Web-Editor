@@ -9,9 +9,9 @@ export function ControlPane(props){
     function playClicked(){
         if(!runSelected){
             const handelCode = MyEditor.getValue();
-            console.log(handelCode);
             let voiceinst = Handel.MakeInstrument({
-                A3: './assets/Do-A3.wav'
+                A3: './assets/Do-A3.wav',
+                A2: './assets/Do-A2.wav'
             })
             let config = {
                 instruments: {

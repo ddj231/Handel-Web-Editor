@@ -131,6 +131,7 @@ a {
     border-color: gray;
     margin-left: 5px;
     position: relative;
+    margin-right: 15px;
 }
 
 .file:hover {

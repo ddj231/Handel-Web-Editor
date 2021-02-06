@@ -1,4 +1,6 @@
 import {MyEditor} from './editor.js';
+import {Examples} from './examples.js'
+
 function FileModal(props){
     function saveClicked(){
         //console.log(MyEditor.getValue());
@@ -29,8 +31,28 @@ function FileModal(props){
     )
 }
 
+function ExampleModal(props){
+    function genClicked(){
+        MyEditor.setValue(Examples.generative);
+    }
+    function bethClicked(){
+        MyEditor.setValue(Examples.beethoven);
+    }
+    function scale(){
+        MyEditor.setValue(Examples.major);
+    }
+    return(
+        <div className="filemodal">
+            <div onClick={genClicked}className="modalitem modalitemtop">Ex. Generative</div>
+            <div onClick={scale} className="modalitem modalitemmiddle">Ex. Scale</div>
+            <div onClick={bethClicked} className="modalitem modalitembottom">Ex. Beethoven</div>
+        </div>
+    )
+}
+
 export function Nav(props){
     let [showFileModal, setShowFileModal] = React.useState(false);
+    let [showExampleModal, setShowExampleModal] = React.useState(false);
     return(
         <div className="handelnav">
             <div className="logo">
@@ -38,10 +60,21 @@ export function Nav(props){
                 handel
                 </div>
             </div>
-            <div onClick={() => {setShowFileModal(!showFileModal)}}className={`file ${showFileModal && "fileselected"}`}>
+            <div onClick={() => {
+                setShowFileModal(!showFileModal)
+                setShowExampleModal(false);
+                }}className={`file ${showFileModal && "fileselected"}`}>
                 File
                 <i className="arrow down"></i>
                 {showFileModal && <FileModal />}
+            </div>
+            <div onClick={() => {
+                setShowExampleModal(!showExampleModal);
+                setShowFileModal(false)}}
+                className={`file ${showExampleModal && "fileselected"}`}>
+                Load Example 
+                <i className="arrow down"></i>
+                {showExampleModal && <ExampleModal />}
             </div>
         </div>
     )

@@ -248,8 +248,6 @@ CodeMirror.defineSimpleMode("handel", {
   });
   
 let startVal = `start
-\tload voice as voice
-
 \tsave group = |C4| C4, F4, D4| E4, G4, B3| A4| B4| D4| E4| G4
 
 \tchunk example
@@ -258,7 +256,7 @@ let startVal = `start
     \tendblock loop for 20 
 \tendchunk
 
-\trun example with sound voice, reverb 10000, volume 45, loop for 100, bpm 250
+\trun example with sound piano, reverb 10000, volume 45, loop for 100, bpm 250
 finish`
 export const MyEditor = CodeMirror(document.body, {
     value: startVal,

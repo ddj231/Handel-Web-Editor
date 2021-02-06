@@ -254,7 +254,7 @@ let startVal = `start
 
 \tchunk example
     \tblock
-    \tplay choose 1 from group for 1b
+    \t\tplay choose 1 from group for 1b
     \tendblock loop for 100
 \tendchunk
 

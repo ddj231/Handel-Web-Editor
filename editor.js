@@ -241,7 +241,7 @@ CodeMirror.defineSimpleMode("handel", {
     token: "atom" }]
 });
 
-var startVal = "start\n\tload voice as voice\n\n\tsave group = |C4| C4, F4, D4| E4, G4, B3\n\n\tchunk example\n    \tblock\n    \tplay choose 1 from group for 1b\n    \tendblock loop for 100\n\tendchunk\n\n\trun example with sound voice\nfinish";
+var startVal = "start\n\tload voice as voice\n\n\tsave group = |C4| C4, F4, D4| E4, G4, B3\n\n\tchunk example\n    \tblock\n    \t\tplay choose 1 from group for 1b\n    \tendblock loop for 100\n\tendchunk\n\n\trun example with sound voice\nfinish";
 export var MyEditor = CodeMirror(document.body, {
   value: startVal,
   lineNumbers: true,

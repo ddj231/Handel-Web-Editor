@@ -9,7 +9,16 @@ export function ControlPane(props){
     function playClicked(){
         if(!runSelected){
             const handelCode = MyEditor.getValue();
-            Handel.RunHandel(handelCode);
+            console.log(handelCode);
+            let voiceinst = Handel.MakeInstrument({
+                A3: './assets/Do-A3.wav'
+            })
+            let config = {
+                instruments: {
+                    voice: voiceinst
+                }
+            };
+            Handel.RunHandel(handelCode, config);
             setRunSelected(true);
         }
     }

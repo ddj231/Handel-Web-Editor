@@ -240,20 +240,25 @@ CodeMirror.defineSimpleMode("handel", {
       {regex: /(?:play|rest|block|endblock|chunk|endchunk|run|save|start|finish|bpm|loop|sound|volume|pan|reverb)\b/,
        token: "keyword"},
       {regex: /synth|casio|guitar|piano|snare|kick|hihat/, token: "atom"},
-      {regex: /(?:for|using|with|update|if|then|eval|choose|from|randint|to|else|endif)\b/,
+      {regex: /(?:for|using|with|load|as|update|if|then|eval|choose|from|randint|to|else|endif)\b/,
        token: "keyword"},
       {regex: /(?:lessthan|greaterthan|equalto|lshift|rshift)\b/,
        token: "atom"},
     ],
   });
   
-let startVal = `start\n\tsave cmajorsev = C3, E3, G3, B3\n\tchunk example\n\t\tblock 
-          save note = choose 1 from cmajorsev
-          play note for 2b
-      endblock loop for 100
-    endchunk
+let startVal = `start
+\tload voice as voice
 
-  run example with sound piano
+\tsave group = |C4| C4, F4, D4| E4, G4, B3
+
+\tchunk example
+    \tblock
+    \tplay choose 1 from group for 1b
+    \tendblock loop for 100
+\tendchunk
+
+\trun example with sound voice
 finish`
 export const MyEditor = CodeMirror(document.body, {
     value: startVal,

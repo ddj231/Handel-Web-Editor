@@ -236,12 +236,12 @@ CodeMirror.defineSimpleMode("handel", {
   start: [{ regex: /(chunk)(\s+)([a-z$]*)/,
     token: ["keyword", null, "variable-2"] }, { regex: /(run)(\s+)([a-z$]*)/,
     token: ["keyword", null, "variable-2"] }, { regex: /(?:play|rest|block|endblock|chunk|endchunk|run|save|start|finish|bpm|loop|sound|volume|pan|reverb)\b/,
-    token: "keyword" }, { regex: /synth|casio|guitar|piano|snare|kick|hihat/, token: "atom" }, { regex: /(?:for|using|with|update|if|then|eval|choose|from|randint|to|else|endif)\b/,
+    token: "keyword" }, { regex: /synth|casio|guitar|piano|snare|kick|hihat/, token: "atom" }, { regex: /(?:for|using|with|load|as|update|if|then|eval|choose|from|randint|to|else|endif)\b/,
     token: "keyword" }, { regex: /(?:lessthan|greaterthan|equalto|lshift|rshift)\b/,
     token: "atom" }]
 });
 
-var startVal = "start\n\tsave cmajorsev = C3, E3, G3, B3\n\tchunk example\n\t\tblock \n          save note = choose 1 from cmajorsev\n          play note for 2b\n      endblock loop for 100\n    endchunk\n\n  run example with sound piano\nfinish";
+var startVal = "start\n\tload voice as voice\n\n\tsave group = |C4| C4, F4, D4| E4, G4, B3\n\n\tchunk example\n    \tblock\n    \tplay choose 1 from group for 1b\n    \tendblock loop for 100\n\tendchunk\n\n\trun example with sound voice\nfinish";
 export var MyEditor = CodeMirror(document.body, {
   value: startVal,
   lineNumbers: true,

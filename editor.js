@@ -241,7 +241,7 @@ CodeMirror.defineSimpleMode("handel", {
     token: "atom" }]
 });
 
-var startVal = "start\n\tsave group = |C4| C4, F4, D4| E4, G4, B3| A4| B4| D4| E4| G4\n\n\tchunk example\n    \tblock\n    \t\tplay choose 1 from group for 1b\n    \tendblock loop for 20 \n\tendchunk\n\n\trun example with sound piano, reverb 10000, volume 45, loop for 100, bpm 250\nfinish";
+var startVal = "start\n\tsave group = |C3| C3, F3, D3| E3, G3, B3| A3| B3| D3| E3| G3\n\n\tchunk example\n    \tblock\n    \t\tplay choose 1 from group for 1b\n    \tendblock loop for 16 \n\tendchunk\n\n\trun example with sound piano, loop for 100, bpm 250\nfinish";
 export var MyEditor = CodeMirror(document.body, {
   value: startVal,
   lineNumbers: true,

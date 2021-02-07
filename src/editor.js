@@ -248,15 +248,15 @@ CodeMirror.defineSimpleMode("handel", {
   });
   
 let startVal = `start
-\tsave group = |C4| C4, F4, D4| E4, G4, B3| A4| B4| D4| E4| G4
+\tsave group = |C3| C3, F3, D3| E3, G3, B3| A3| B3| D3| E3| G3
 
 \tchunk example
     \tblock
     \t\tplay choose 1 from group for 1b
-    \tendblock loop for 20 
+    \tendblock loop for 16 
 \tendchunk
 
-\trun example with sound piano, reverb 10000, volume 45, loop for 100, bpm 250
+\trun example with sound piano, loop for 100, bpm 250
 finish`
 export const MyEditor = CodeMirror(document.body, {
     value: startVal,

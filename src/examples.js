@@ -61,5 +61,17 @@ finish`,
     endchunk
     save startnote = Bb2
     run shiftscale using startnote with sound piano, loop for 3
+finish`,
+    generativeSecond: `start
+	save notes = F3, G3, Ab3, Bb3, C3, Db3, Eb3
+	chunk example
+    	save i = 0
+    	block
+        	save choice = choose i % 6 from notes
+            update i = i + 1
+       		play choice for 1b
+        endblock loop while i lessthan 100
+    endchunk
+    run example with sound piano
 finish`
 }

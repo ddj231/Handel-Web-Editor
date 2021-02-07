@@ -38,13 +38,13 @@ function ExampleModal(props){
     function bethClicked(){
         MyEditor.setValue(Examples.beethoven);
     }
-    function scale(){
-        MyEditor.setValue(Examples.major);
+    function genSecondClicked(){
+        MyEditor.setValue(Examples.generativeSecond);
     }
     return(
         <div className="filemodal">
-            <div onClick={genClicked}className="modalitem modalitemtop">Ex. Generative</div>
-            <div onClick={scale} className="modalitem modalitemmiddle">Ex. Scale</div>
+            <div onClick={genClicked}className="modalitem modalitemtop">Ex. Generative 1</div>
+            <div onClick={genSecondClicked} className="modalitem modalitemmiddle">Ex. Generative 2</div>
             <div onClick={bethClicked} className="modalitem modalitembottom">Ex. Beethoven</div>
         </div>
     )

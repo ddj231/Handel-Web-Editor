@@ -52,8 +52,8 @@ function ExampleModal(props) {
     function bethClicked() {
         MyEditor.setValue(Examples.beethoven);
     }
-    function scale() {
-        MyEditor.setValue(Examples.major);
+    function genSecondClicked() {
+        MyEditor.setValue(Examples.generativeSecond);
     }
     return React.createElement(
         'div',
@@ -61,12 +61,12 @@ function ExampleModal(props) {
         React.createElement(
             'div',
             { onClick: genClicked, className: 'modalitem modalitemtop' },
-            'Ex. Generative'
+            'Ex. Generative 1'
         ),
         React.createElement(
             'div',
-            { onClick: scale, className: 'modalitem modalitemmiddle' },
-            'Ex. Scale'
+            { onClick: genSecondClicked, className: 'modalitem modalitemmiddle' },
+            'Ex. Generative 2'
         ),
         React.createElement(
             'div',

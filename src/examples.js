@@ -68,7 +68,7 @@ finish`,
     	save i = 0
     	block
         	save choice = choose i % 6 from notes
-            update i = i + 1
+            update i = eval i + 1
        		play choice for 1b
         endblock loop while i lessthan 100
     endchunk

@@ -257,7 +257,7 @@ CodeMirror.defineSimpleMode("handel", {
     }
   });
   
-let startVal = `/ song-title: Hello Handel /
+let startVal = `/ title: Hello Handel /
 start
 \tsave group = |C3| C3, F3, D3| E3, G3, B3| A3| B3| D3| E3| G3
 

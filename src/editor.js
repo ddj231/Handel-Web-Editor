@@ -239,15 +239,26 @@ CodeMirror.defineSimpleMode("handel", {
        token: ["keyword", null, "variable-2"]},
       {regex: /(?:play|rest|block|endblock|chunk|endchunk|run|save|start|finish|bpm|loop|sound|volume|pan|reverb)\b/,
        token: "keyword"},
-      {regex: /synth|casio|select|guitar|piano|snare|kick|hihat/, token: "atom"},
-      {regex: /(?:for|using|while|with|load|as|update|if|then|eval|choose|from|randint|to|else|endif)\b/,
+      {regex: /synth|casio|guitar|piano|snare|kick|hihat/, token: "atom"},
+      {regex: /(?:for|using|select|while|with|load|as|update|if|then|eval|choose|from|randint|to|else|endif)\b/,
        token: "keyword"},
       {regex: /(?:lessthan|greaterthan|equalto|lshift|rshift)\b/,
        token: "atom"},
+       {regex: /\//, token: "comment", next: "comment"},
     ],
+    comment: [
+      //{regex: /.*?\*\//, token: "comment", next: "start"},
+      {regex: /\//, token: "comment", next: "start"},
+      {regex: /([^\/])*/, token: "comment"}
+    ],
+    meta: {
+      dontIndentStates: ["comment"],
+      lineComment: "//"
+    }
   });
   
-let startVal = `start
+let startVal = `/ song-title: Hello Handel /
+start
 \tsave group = |C3| C3, F3, D3| E3, G3, B3| A3| B3| D3| E3| G3
 
 \tchunk example

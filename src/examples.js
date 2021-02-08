@@ -20,7 +20,8 @@ export const Examples = {
 finish
     `,
     beethoven: `start
-	chunk beethoven
+    chunk beethoven
+        rest for 2b
    		play G3 for 1b loop for 3
    		play Eb3 for 4b
    		play F3 for 1b loop for 3

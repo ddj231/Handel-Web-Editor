@@ -71,8 +71,8 @@ finish`,
         	save choice = choose i % 6 from notes
             update i = eval i + 1
        		play choice for 1b
-        endblock loop while i lessthan 100
+        endblock loop while i < 100
     endchunk
-    run example with sound piano
+    run example with sound piano, volume 45
 finish`
 }

@@ -15,8 +15,8 @@ export const Examples = {
         endblock loop for 8 
     endchunk
     
-    run backing with sound piano, loop for 30
-    run melodyline with sound piano, loop for 30 
+    run backing with sound piano, loop for 30, volume 45
+    run melodyline with sound piano, loop for 30, volume 45 
 finish
     `,
     beethoven: `start

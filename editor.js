@@ -237,7 +237,7 @@ CodeMirror.defineSimpleMode("handel", {
     token: ["keyword", null, "variable-2"] }, { regex: /(run)(\s+)([a-z$]*)/,
     token: ["keyword", null, "variable-2"] }, { regex: /(?:play|rest|block|endblock|chunk|endchunk|run|save|start|finish|bpm|loop|sound|volume|pan|reverb)\b/,
     token: "keyword" }, { regex: /synth|casio|guitar|piano|snare|kick|hihat/, token: "atom" }, { regex: /(?:select|choose|using|while|load|update|if|then|as|with|call|for|from|to|eval|randint|else|endif)\b/,
-    token: "keyword" }, { regex: /(?:lessthan|greaterthan|equalto|lshift|rshift)\b/,
+    token: "keyword" }, { regex: /(?:lshift|rshift)\b/,
     token: "atom" }, { regex: /\//, token: "comment", next: "comment" }],
   comment: [
   //{regex: /.*?\*\//, token: "comment", next: "start"},
@@ -255,7 +255,14 @@ export var MyEditor = CodeMirror(document.body, {
   mode: 'handel'
 });
 
-var myConsole = document.createElement('div');
-//myConsole.innerText = "hello";
-//document.body.appendChild(myConsole);
+export var myConsoleDiv = document.createElement('div');
+var cm = document.querySelector('.CodeMirror');
+//myConsoleDiv.style.width = "200px";
+myConsoleDiv.style.width = "98%";
+myConsoleDiv.style.height = "10%";
+myConsoleDiv.classList.add("console");
+document.body.appendChild(myConsoleDiv);
 var header = document.createElement('div');
+header.classList.add("consoleheader");
+myConsoleDiv.appendChild(header);
+header.innerText = "Console";

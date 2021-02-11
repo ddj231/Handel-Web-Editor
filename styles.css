@@ -95,13 +95,31 @@ a {
     margin-top: 30px;
     border: 1px solid lightslategray;
     max-width: 98%;
-    resize: both;
+    resize: vertical;
+    overflow: auto !important;
     font-size: 15px;
 }
 
+.console {
+    border: 1px solid lightslategray;
+    margin-top: 5px;
+    resize: vertical;
+    overflow: auto !important;
+    padding: 5px;
+    font-size: 15px;
+    height: 30%;
+    padding: 5px;
+    color: crimson;
+}
+
 .consoleheader {
-    height: 20px;
+    height: 40px;
     width: 100%;
+    font-size: 15px;
+    background-color: rgb(247, 247, 247);
+    color: rgb(156, 156, 156);
+    line-height: 40px;
+    padding: 5px;
 }
 
 .guide {

@@ -1,6 +1,6 @@
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
-import { MyEditor } from './editor.js';
+import { MyEditor, myConsoleDiv } from './editor.js';
 import './codemirror-5.59.1/keymap/vim.js';
 
 export function ControlPane(props) {
@@ -31,7 +31,14 @@ export function ControlPane(props) {
                     voice: voiceinst
                 }
             };
-            Handel.RunHandel(handelCode, config);
+            Handel.RunHandel(handelCode, config).then(function () {
+                var textnode = document.createElement("div");
+                myConsoleDiv.appendChild(textnode);
+            }).catch(function (ex) {
+                var textnode = document.createElement("div");
+                textnode.innerText = ex;
+                myConsoleDiv.appendChild(textnode);
+            });
             setRunSelected(true);
         }
     }

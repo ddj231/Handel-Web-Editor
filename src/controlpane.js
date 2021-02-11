@@ -1,4 +1,4 @@
-import {MyEditor} from './editor.js';
+import {MyEditor, myConsoleDiv} from './editor.js';
 import './codemirror-5.59.1/keymap/vim.js' 
 
 export function ControlPane(props){
@@ -18,7 +18,15 @@ export function ControlPane(props){
                     voice: voiceinst
                 }
             };
-            Handel.RunHandel(handelCode, config);
+            Handel.RunHandel(handelCode, config)
+            .then(()=> {
+                let textnode = document.createElement("div");
+                myConsoleDiv.appendChild(textnode);
+            }).catch((ex) => {
+                let textnode = document.createElement("div");
+                textnode.innerText = ex;
+                myConsoleDiv.appendChild(textnode);
+            });
             setRunSelected(true);
         }
     }

@@ -242,7 +242,7 @@ CodeMirror.defineSimpleMode("handel", {
       {regex: /synth|casio|guitar|piano|snare|kick|hihat/, token: "atom"},
       {regex: /(?:select|choose|using|while|load|update|if|then|as|with|call|for|from|to|eval|randint|else|endif)\b/,
        token: "keyword"},
-      {regex: /(?:lessthan|greaterthan|equalto|lshift|rshift)\b/,
+      {regex: /(?:lshift|rshift)\b/,
        token: "atom"},
        {regex: /\//, token: "comment", next: "comment"},
     ],
@@ -275,7 +275,14 @@ export const MyEditor = CodeMirror(document.body, {
     mode: 'handel',
 }); 
 
-let myConsole = document.createElement('div');
-//myConsole.innerText = "hello";
-//document.body.appendChild(myConsole);
+export const myConsoleDiv = document.createElement('div');
+let cm = document.querySelector('.CodeMirror');
+//myConsoleDiv.style.width = "200px";
+myConsoleDiv.style.width = "98%";
+myConsoleDiv.style.height = "10%";
+myConsoleDiv.classList.add("console");
+document.body.appendChild(myConsoleDiv);
 let header = document.createElement('div');
+header.classList.add("consoleheader");
+myConsoleDiv.appendChild(header);
+header.innerText = "Console";

@@ -242,7 +242,7 @@ CodeMirror.defineSimpleMode("handel", {
       {regex: /synth|casio|guitar|piano|snare|kick|hihat/, token: "atom"},
       {regex: /(?:select|choose|using|while|load|update|if|then|as|with|call|for|from|to|eval|randint|else|endif)\b/,
        token: "keyword"},
-      {regex: /(?:lshift|rshift)\b/,
+      {regex: /(?:lshift|rshift|and|or)\b/,
        token: "atom"},
        {regex: /\//, token: "comment", next: "comment"},
     ],

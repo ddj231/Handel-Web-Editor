@@ -1,24 +1,23 @@
 export const Examples = {
     generative: `start
-	save chords = |C3, E3, G3| G3, B3, D3| F3, A3, C3
-    save notes = A3, B3, C3, D3, E3, F3, G3
-    
+	save chords = |E3, G3, B3| G3, B3, D3| D3, F3, A3|C3, E3, G3  
+    save notes =  C3, D3, E3, G3
+	
     chunk backing 
     	block
         	play choose 1 from chords for 2b
-        endblock loop for 4 
+        endblock loop for 8 
     endchunk
     
     chunk melodyline
     	block
         	play choose 1 from notes for 1b 
-        endblock loop for 8 
+        endblock loop for 16 
     endchunk
     
-    run backing with sound piano, loop for 30, volume 45
-    run melodyline with sound piano, loop for 30, volume 45 
-finish
-    `,
+    run backing with sound piano, loop for 30, bpm 144, volume 42
+    run melodyline with sound guitar, loop for 30, bpm 144, volume 43 
+finish`,
     beethoven: `start
 	chunk beethovenhelper
    		play G3 for 1b loop for 3

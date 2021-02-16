@@ -44,7 +44,7 @@ finish
     
     chunk beethoven
     	rest for 2b
-        call bethovenhelper
+        call beethovenhelper
 	endchunk
 
 	run beethoven with sound piano, bpm 300, loop for 2

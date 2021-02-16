@@ -20,8 +20,7 @@ export const Examples = {
 finish
     `,
     beethoven: `start
-    chunk beethoven
-        rest for 2b
+	chunk beethovenhelper
    		play G3 for 1b loop for 3
    		play Eb3 for 4b
    		play F3 for 1b loop for 3
@@ -41,6 +40,11 @@ finish
         endblock loop for 3
         play C3, D#3, F#3 for 4b
         play D3, G3 for 4b
+    endchunk
+    
+    chunk beethoven
+    	rest for 2b
+        call bethovenhelper
 	endchunk
 
 	run beethoven with sound piano, bpm 300, loop for 2

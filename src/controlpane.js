@@ -3,7 +3,6 @@ import './codemirror-5.59.1/keymap/vim.js'
 
 export function ControlPane(props){
     let [runSelected, setRunSelected] = React.useState(false);
-    let [runCount, setRunCount] = React.useState(0);
     let [vimModeChecked, setVimModeChecked] = React.useState(false);
 
     function playClicked(){

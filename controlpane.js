@@ -9,17 +9,13 @@ export function ControlPane(props) {
         runSelected = _React$useState2[0],
         setRunSelected = _React$useState2[1];
 
-    var _React$useState3 = React.useState(0),
+    var _React$useState3 = React.useState(false),
         _React$useState4 = _slicedToArray(_React$useState3, 2),
-        runCount = _React$useState4[0],
-        setRunCount = _React$useState4[1];
-
-    var _React$useState5 = React.useState(false),
-        _React$useState6 = _slicedToArray(_React$useState5, 2),
-        vimModeChecked = _React$useState6[0],
-        setVimModeChecked = _React$useState6[1];
+        vimModeChecked = _React$useState4[0],
+        setVimModeChecked = _React$useState4[1];
 
     function playClicked() {
+        console.log("run clicked");
         if (!runSelected) {
             var handelCode = MyEditor.getValue();
             var voiceinst = Handel.MakeInstrument({
@@ -44,10 +40,9 @@ export function ControlPane(props) {
     }
 
     function stopClicked() {
-        if (runSelected) {
-            Handel.StopHandel();
-            setRunSelected(false);
-        }
+        console.log("stop clicked");
+        Handel.StopHandel();
+        setRunSelected(false);
     }
 
     function handleVimModeChange() {

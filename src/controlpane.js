@@ -32,10 +32,8 @@ export function ControlPane(props){
     }
 
     function stopClicked(){
-        if(runSelected){
-            Handel.StopHandel();
-            setRunSelected(false);
-        }
+        Handel.StopHandel();
+        setRunSelected(false);
     }
 
     function handleVimModeChange(){

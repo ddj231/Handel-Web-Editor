@@ -107,23 +107,9 @@ a {
     height: 50vh;
     resize: vertical;
     overflow: auto !important;
-    font-size: 1em;
+    font-size: 1.25em;
 }
 
-/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-@media screen and (min-width: 401px) {
-   body {
-      font-size: 16px;
-    }
-  }
-  
-  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-  @media screen and (max-width: 400px) {
-   body {
-      font-size: 20px;
-    }
-    
-  }
 
 .console {
     border: 1px solid lightslategray;

@@ -261,15 +261,7 @@ CodeMirror.defineSimpleMode("handel", {
   
 let startVal = `/ title: Hello Handel /
 start
-\tsave group = |C3| C3, F3, D3| E3, G3, B3| A3| B3| D3| E3| G3
-
-\tchunk example
-    \tblock
-    \t\tplay choose 1 from group for 1b
-    \tendblock loop for 16 
-\tendchunk
-
-\trun example with sound piano, loop for 100, bpm 250
+\tplay E4 for 1b
 finish`
 export const MyEditor = CodeMirror(document.querySelector('#codeEditor'), {
     value: startVal,

@@ -249,7 +249,7 @@ CodeMirror.defineSimpleMode("handel", {
   }
 });
 
-var startVal = "/ title: Hello Handel /\nstart\n\tsave group = |C3| C3, F3, D3| E3, G3, B3| A3| B3| D3| E3| G3\n\n\tchunk example\n    \tblock\n    \t\tplay choose 1 from group for 1b\n    \tendblock loop for 16 \n\tendchunk\n\n\trun example with sound piano, loop for 100, bpm 250\nfinish";
+var startVal = "/ title: Hello Handel /\nstart\n\tplay E4 for 1b\nfinish";
 export var MyEditor = CodeMirror(document.querySelector('#codeEditor'), {
   value: startVal,
   lineNumbers: true,

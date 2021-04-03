@@ -259,7 +259,9 @@ CodeMirror.defineSimpleMode("handel", {
     }
   });
   
-let startVal = `/ title: Hello Handel /
+const Storage = window.localStorage;
+const currentProgram = Storage.getItem('currentHandelProgram');
+let startVal = currentProgram ? currentProgram : `/ title: Hello Handel /
 start
 \tplay E4 for 1b
 finish`

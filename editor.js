@@ -249,7 +249,9 @@ CodeMirror.defineSimpleMode("handel", {
   }
 });
 
-var startVal = "/ title: Hello Handel /\nstart\n\tplay E4 for 1b\nfinish";
+var Storage = window.localStorage;
+var currentProgram = Storage.getItem('currentHandelProgram');
+var startVal = currentProgram ? currentProgram : "/ title: Hello Handel /\nstart\n\tplay E4 for 1b\nfinish";
 export var MyEditor = CodeMirror(document.querySelector('#codeEditor'), {
   value: startVal,
   lineNumbers: true,

@@ -146,7 +146,7 @@ a {
 .vimtext {
     font-size: 1em; 
     color: gray;
-    margin-right: 1em;
+    margin-right: 0.5em;
 }
 
 .guide:hover {

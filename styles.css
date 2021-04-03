@@ -37,9 +37,9 @@ a {
 }
 
 .logo {
-    height: 50px;
-    width: 80px; 
-    font-size: 20px;
+    height: 2em;
+    width: 4em; 
+    font-size: 1.5em;
     background-color: crimson;
     margin-left: 0px;
     color: white;
@@ -48,7 +48,7 @@ a {
 }
 
 .logotext{
-    line-height: 50px; 
+    line-height: 2em; 
     background-color: crimson;
 }
 
@@ -58,7 +58,7 @@ a {
 
 .handelnav{
     width: 100%;
-    height: 10vh;
+    height: 4em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -67,7 +67,7 @@ a {
 
 .controlpane {
     width: 100%;
-    height: 10vh;
+    height: 4em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -76,10 +76,10 @@ a {
 }
 
 .mybtn {
-    margin: 5px;
-    height: 50px;
-    width: 50px;
-    border-radius: 25px;
+    margin: 0.5em;
+    height: 3em;
+    width: 3em;
+    border-radius: 1.25em; 
     background-color: grey;
 }
 .mybtn:hover {
@@ -94,72 +94,73 @@ a {
 
 .buttontext {
     color: white;
-    font-weight: 300;
-    line-height: 50px;
-    font-size: 12px;
+    font-weight: 400;
+    line-height: 3em;
+    font-size: 1em;
     text-align: center;
 }
 
 .CodeMirror {
-    margin-top: 30px;
+    margin-top: 1em;
     border: 1px solid lightslategray;
     max-width: 98%;
-    height: 60vh;
+    height: 50vh;
     resize: vertical;
     overflow: auto !important;
-    font-size: 15px;
+    font-size: 1em;
 }
 
 /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-@media screen and (min-width: 601px) {
-   .CodeMirror {
-      font-size: 15px;
+@media screen and (min-width: 401px) {
+   body {
+      font-size: 16px;
     }
   }
   
   /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-  @media screen and (max-width: 600px) {
-   .CodeMirror {
+  @media screen and (max-width: 400px) {
+   body {
       font-size: 20px;
     }
+    
   }
 
 .console {
     border: 1px solid lightslategray;
-    margin-top: 5px;
+    margin-top: 0.25em;
     resize: vertical;
     overflow: auto !important;
-    padding: 5px;
-    font-size: 15px;
+    padding: 0.25em;
+    font-size: 1em;
     height: 30%;
-    padding: 5px;
+    padding: 0.25;
     color: crimson;
 }
 
 .consoleheader {
-    height: 40px;
+    height: 3em;
     width: 100%;
-    font-size: 15px;
+    font-size: 1em;
     background-color: rgb(247, 247, 247);
     color: rgb(156, 156, 156);
-    line-height: 40px;
-    padding: 5px;
+    line-height: 1.5em;
+    padding: 0.25em;
 }
 
 .guide {
-    font-size: 13px;
+    font-size: 1em;
     color: gray;
-    margin-left: 5px;
+    margin-left: 0.25em;
 }
 
 .form-check {
-    margin-left: 20px;
+    margin-left: 1.5em;
 }
 
 .vimtext {
-    font-size: 13px;
+    font-size: 1em; 
     color: gray;
-    margin-right: 20px;
+    margin-right: 1em;
 }
 
 .guide:hover {
@@ -168,7 +169,7 @@ a {
 }
 
 .file {
-    font-size: 14px;
+    font-size: 1.25em;
     color: gray;
     border-color: gray;
     margin-left: 5px;
@@ -190,10 +191,10 @@ a {
 
 .arrow {
     border: solid;
-    border-width: 0 3px 3px 0;
+    border-width: 0em 0.25em 0.25em 0em;
     display: inline-block;
-    padding: 3px;
-    margin-left: 3px;
+    padding: 0.5em;
+    margin-left: 0.5em;
 }
 
 .down {
@@ -204,13 +205,15 @@ a {
 .filemodal {
     position: absolute;
     color: black;
-    bottom: -100px;
+    bottom: -5em;
     left: -10px;
-    height: 100px;
-    width: 200px;
+    height: 5.1em;
+    width: 9em;
     background-color: rgb(240, 240, 240);
     text-align: left;
     border-radius: 10px;
+    z-index: 2;
+    font-size: 0.8em;
 }
 
 .modalitemtop {
@@ -218,14 +221,14 @@ a {
     border-top-right-radius: 10px;
     height: 33%;
     width: 100%;
-    padding: 10px;
+    padding: 0.25em;
     color: rgb(40, 40, 40);
 }
 
 .modalitemmiddle{
     height: 33%;
     width: 100%;
-    padding: 10px;
+    padding: 0.25em;
     color: rgb(40, 40, 40);
 }
 
@@ -234,7 +237,7 @@ a {
     border-bottom-right-radius: 10px;
     height: 33%;
     width: 100%;
-    padding: 10px;
+    padding: 0.25em;
     color: rgb(40, 40, 40);
 }
 
@@ -251,6 +254,6 @@ a {
 }
 
 .codeEditor {
-    width: 80vh;    
-    height: 70vh;
+    width: 90vh;    
+    height: 60vh;
 }

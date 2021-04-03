@@ -15,7 +15,6 @@ export function ControlPane(props) {
         setVimModeChecked = _React$useState4[1];
 
     function playClicked() {
-        console.log("run clicked");
         if (!runSelected) {
             var handelCode = MyEditor.getValue();
             var voiceinst = Handel.MakeInstrument({
@@ -40,7 +39,6 @@ export function ControlPane(props) {
     }
 
     function stopClicked() {
-        console.log("stop clicked");
         Handel.StopHandel();
         setRunSelected(false);
     }

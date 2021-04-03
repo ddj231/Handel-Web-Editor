@@ -271,7 +271,7 @@ start
 
 \trun example with sound piano, loop for 100, bpm 250
 finish`
-export const MyEditor = CodeMirror(document.body, {
+export const MyEditor = CodeMirror(document.querySelector('#codeEditor'), {
     value: startVal,
     lineNumbers: true,
     mode: 'handel',

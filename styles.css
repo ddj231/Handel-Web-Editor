@@ -1,3 +1,8 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     font-family: Nunito, sans-serif;
     overflow: hidden;
@@ -22,14 +27,17 @@ a {
 }
 
 .app{
-    height: 100%; 
-    width: 100%; 
-    padding: 0px;
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
     margin: 0px;
+    padding: 0px;
 }
 
 .logo {
-    height: 40px; 
+    height: 50px;
     width: 80px; 
     font-size: 20px;
     background-color: crimson;
@@ -40,7 +48,8 @@ a {
 }
 
 .logotext{
-    line-height: 40px;
+    line-height: 50px; 
+    background-color: crimson;
 }
 
 .border-dotted {
@@ -49,7 +58,7 @@ a {
 
 .handelnav{
     width: 100%;
-    height: 40px;
+    height: 10vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -58,7 +67,7 @@ a {
 
 .controlpane {
     width: 100%;
-    height: 60px;
+    height: 10vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -95,10 +104,25 @@ a {
     margin-top: 30px;
     border: 1px solid lightslategray;
     max-width: 98%;
+    height: 60vh;
     resize: vertical;
     overflow: auto !important;
     font-size: 15px;
 }
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+   .CodeMirror {
+      font-size: 15px;
+    }
+  }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+   .CodeMirror {
+      font-size: 20px;
+    }
+  }
 
 .console {
     border: 1px solid lightslategray;
@@ -224,4 +248,9 @@ a {
 
 .cm-animate-fat-cursor {
     background-color: crimson !important;
+}
+
+.codeEditor {
+    width: 80vh;    
+    height: 70vh;
 }

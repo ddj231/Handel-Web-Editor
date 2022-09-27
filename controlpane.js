@@ -26,7 +26,7 @@ export function ControlPane(props) {
                     voice: voiceinst
                 }
             };
-            var Storage = window.localStorage;
+            var localStorage = window.localStorage;
             localStorage.setItem('currentHandelProgram', handelCode);
             Handel.RunHandel(handelCode, config).then(function () {
                 var textnode = document.createElement("div");

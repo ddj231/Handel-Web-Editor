@@ -17,7 +17,7 @@ export function ControlPane(props){
                     voice: voiceinst
                 }
             };
-            const Storage = window.localStorage;
+            const localStorage= window.localStorage;
             localStorage.setItem('currentHandelProgram', handelCode);
             Handel.RunHandel(handelCode, config)
             .then(()=> {

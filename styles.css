@@ -136,7 +136,7 @@ a {
 .guide {
     font-size: 1em;
     color: gray;
-    margin-left: 0.25em;
+    margin-left: 25px;
 }
 
 .form-check {
@@ -144,9 +144,8 @@ a {
 }
 
 .vimtext {
-    font-size: 1em; 
+    font-size: 0.8em; 
     color: gray;
-    margin-right: 0.5em;
 }
 
 .guide:hover {
